@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Expediente Vivo reconstructs mixed document folders into traceable matters, timelines and safe next steps.">
+    <title>Expediente Vivo · Human–agent evidence review</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Expediente Vivo home">
+        <svg viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M6 4h17l7 7v21H6z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <path d="M23 4v8h7M11 18h14M11 24h9" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <circle cx="26.5" cy="25.5" r="5.5" fill="#ff7b5f" stroke="#f7f4ed" stroke-width="2"/>
+        </svg>
+        <span>Expediente Vivo</span>
+      </a>
+      <div class="topbar-actions">
+        <span class="track-pill">WebMCP Challenge</span>
+        <div class="language-switch" aria-label="Language">
+          <button class="language-button active" type="button" data-language="en" aria-pressed="true">EN</button>
+          <button class="language-button" type="button" data-language="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="presentation-notice" aria-labelledby="presentation-notice-title">
+        <strong id="presentation-notice-title" data-i18n="demoNoticeTitle">Public judging demo · verified synthetic snapshot</strong>
+        <span data-i18n="demoNoticeBody">Synthetic-only presentation: four WebMCP tools inspect, focus and propose while the final decision stays human.</span>
+      </section>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">HUMAN–AGENT EVIDENCE REVIEW</p>
+          <h1 data-i18n="headline">Let the agent inspect. Keep the decision human.</h1>
+          <p class="lede" data-i18n="lede">WebMCP gives the agent structured access to the open dossier, brings exact evidence into view and hands a bounded proposal back to the reviewer.</p>
+          <div class="trust-row" aria-label="Product safeguards">
+            <span data-i18n="trustEvidence">Every claim cited</span>
+            <span data-i18n="trustUncertainty">Uncertainty stays visible</span>
+            <span data-i18n="trustHuman">Human review when evidence is weak</span>
+          </div>
+        </div>
+        <aside class="runtime-card" aria-label="Runtime status">
+          <div class="runtime-head">
+            <span class="live-dot" aria-hidden="true"></span>
+            <strong data-i18n="runtimeTitle">Agent runtime</strong>
+          </div>
+          <p id="runtime-status" data-i18n="runtimeChecking">Checking environment…</p>
+          <div class="runtime-stack">
+            <span>Google ADK</span><span>Gemini 3.7 Flash</span><span>Vertex AI</span>
+          </div>
+          <div class="webmcp-observer" aria-live="polite">
+            <strong data-i18n="webMcpTitle">Site tools</strong>
+            <span id="webmcp-status" data-i18n="webMcpChecking">Checking WebMCP support…</span>
+            <small id="webmcp-activity" data-i18n="webMcpIdle">No WebMCP calls yet.</small>
+          </div>
+        </aside>
+      </section>
+
+      <section class="workspace" aria-labelledby="start-title">
+        <div class="section-heading">
+          <div>
+            <p class="step-label" data-i18n="stepInput">01 · INPUT</p>
+            <h2 id="start-title" data-i18n="inputTitle">Add the documents. Order does not matter.</h2>
+            <p data-i18n="inputDescription">Upload up to 12 synthetic PDFs. They may be duplicated, incomplete or belong to different matters.</p>
+          </div>
+          <span class="synthetic-pill" data-i18n="syntheticOnly">Synthetic data only</span>
+        </div>
+
+        <div class="input-grid">
+          <article class="demo-case">
+            <div class="demo-case-top">
+              <span class="demo-kicker" data-i18n="recommendedDemo">RECOMMENDED DEMO</span>
+              <span class="safe-pill" data-i18n="safeDataset">100% synthetic</span>
+            </div>
+            <h3 data-i18n="demoTitle">Mixed case folder</h3>
+            <p data-i18n="demoDescription">A contract, two claims, court orders, a duplicate, an undated note and a page without usable text.</p>
+            <div class="file-stack" aria-hidden="true">
+              <span>A01_contract.pdf</span>
+              <span>B01_claim.pdf</span>
+              <span>A04_remedy_order.pdf</span>
+              <span>+ 7</span>
+            </div>
+            <dl class="demo-stats">
+              <div><dt>10</dt><dd data-i18n="pdfs">PDFs</dd></div>
+              <div><dt>2</dt><dd data-i18n="mixedMatters">mixed matters</dd></div>
+              <div><dt>1</dt><dd data-i18n="duplicate">duplicate</dd></div>
+            </dl>
+            <button id="golden-button" class="primary-action" type="button">
+              <span data-i18n="runDemo">Reconstruct this case</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- PRIVATE_UPLOAD_START -->
+          <div id="drop-zone" class="drop-zone">
+            <div class="drop-icon" aria-hidden="true">PDF</div>
+            <h3 data-i18n="uploadTitle">Use another synthetic folder</h3>
+            <p data-i18n="uploadDescription">Drop multiple PDFs here or choose them from your computer.</p>
+            <label class="file-label">
+              <span data-i18n="choosePdfs">Choose PDFs</span>
+              <input id="pdf-input" type="file" accept="application/pdf" multiple>
+            </label>
+            <div id="file-list" class="selected-files" aria-live="polite"></div>
+            <button id="upload-button" class="secondary-action" type="button" disabled data-i18n="processSelection">Reconstruct selection</button>
+          </div>
+          <!-- PRIVATE_UPLOAD_END -->
+        </div>
+      </section>
+
+      <section id="progress" class="processing hidden" aria-live="polite" aria-labelledby="processing-title">
+        <div class="processing-copy">
+          <p class="step-label inverted" data-i18n="stepProcessing">02 · AGENT WORKFLOW</p>
+          <h2 id="processing-title" data-i18n="processingTitle">Reconstructing the folder</h2>
+          <p data-i18n="processingDescription">Operational stages only — no hidden reasoning is displayed.</p>
+        </div>
+        <ol id="stage-list" class="stage-list"></ol>
+      </section>
+
+      <section id="results" class="results hidden" aria-labelledby="results-title">
+        <div class="result-header">
+          <div>
+            <p class="step-label" data-i18n="stepResult">03 · VERIFIED DOSSIER</p>
+            <h2 id="results-title" data-i18n="resultsTitle">Folder reconstructed</h2>
+            <p id="result-subtitle"></p>
+          </div>
+          <div id="run-proof" class="run-proof"></div>
+        </div>
+        <div id="summary" class="summary" aria-live="polite"></div>
+
+        <section id="review-workflow" class="review-workflow hidden" aria-labelledby="review-workflow-title">
+          <div class="review-workflow-head">
+            <div>
+              <p class="step-label" data-i18n="reviewDesk">HUMAN–AGENT REVIEW</p>
+              <h3 id="review-workflow-title" data-i18n="reviewDeskTitle">Review proposals</h3>
+            </div>
+            <p data-i18n="reviewDeskHint">Agent proposals stay separate from the canonical dossier until a person explicitly accepts or rejects them.</p>
+          </div>
+          <div id="review-proposals" class="review-proposals" aria-live="polite"></div>
+        </section>
+
+        <div class="result-layout">
+          <aside class="matter-sidebar" aria-label="Identified matters">
+            <div class="sidebar-heading">
+              <span data-i18n="identifiedMatters">Identified matters</span>
+              <span id="matter-count" class="count-badge"></span>
+            </div>
+            <nav id="matter-tabs" class="matter-tabs"></nav>
+            <div class="legend">
+              <strong data-i18n="legend">Evidence language</strong>
+              <span><i class="legend-dot fact"></i> FACT</span>
+              <span><i class="legend-dot allegation"></i> PARTY ALLEGATION</span>
+              <span><i class="legend-dot inference"></i> INFERENCE</span>
+              <span><i class="legend-dot unresolved"></i> UNRESOLVED</span>
+              <span><i class="legend-dot review"></i> HUMAN REVIEW</span>
+            </div>
+          </aside>
+          <div id="matter-detail" class="matter-detail" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p data-i18n="footerDisclaimer">Expediente Vivo reconstructs supplied evidence. It does not provide legal advice or decide legal truth.</p>
+      <span data-i18n="footerStack">Google ADK · Vertex AI · Cloud Run · Cloud Storage</span>
+    </footer>
+
+    <dialog id="evidence-dialog" class="evidence-dialog" aria-labelledby="evidence-title">
+      <div class="dialog-head">
+        <div>
+          <p class="step-label" data-i18n="sourceTrace">SOURCE TRACE</p>
+          <h2 id="evidence-title" data-i18n="evidenceTitle">Claim evidence</h2>
+        </div>
+        <button id="close-evidence" class="icon-button" type="button" aria-label="Close">×</button>
+      </div>
+      <div id="evidence-content"></div>
+    </dialog>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

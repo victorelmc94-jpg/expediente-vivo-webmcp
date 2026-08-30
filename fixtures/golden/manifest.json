@@ -1,0 +1,29 @@
+{
+  "dataset_id": "golden-v1",
+  "synthetic": true,
+  "subject_party": "ALICIA DEMO",
+  "expected": {
+    "matters": 2,
+    "duplicates": 1,
+    "unclassified_documents": 1,
+    "claimed_amount_not_recognized_debt": "565.20 EUR",
+    "counterparty_deadline_target": "ADELANTO NORTE SL",
+    "page_specific_fact": {
+      "file": "B03_judgment.pdf",
+      "page": 2,
+      "fragment": "FINAL RECOGNIZED AMOUNT: 233.00 EUR"
+    }
+  },
+  "files": [
+    "A01_contract.pdf",
+    "A02_claim.pdf",
+    "A03_admission.pdf",
+    "A04_remedy_order.pdf",
+    "A05_undated_note.pdf",
+    "B01_claim.pdf",
+    "B02_abusive_terms_order.pdf",
+    "B03_judgment.pdf",
+    "C00_scan_without_text.pdf",
+    "A04_remedy_order_DUPLICATE.pdf"
+  ]
+}

@@ -1,0 +1,11 @@
+.git/
+.tools/
+.npm-cache/
+node_modules/
+artifacts/
+docs/
+test/
+.env
+.env.*
+!.env.example
+*.log

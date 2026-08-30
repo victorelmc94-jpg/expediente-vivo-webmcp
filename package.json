@@ -1,0 +1,39 @@
+{
+  "name": "expediente-vivo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Expediente Vivo Evidence Review Desk for the OpenAI WebMCP Challenge.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test test/critical/vertical-slice.test.js test/critical/robustness-dataset.test.js",
+    "test:critical": "node --test test/critical/vertical-slice.test.js test/critical/robustness-dataset.test.js",
+    "test:demo": "node --test test/demo/demo-readonly.test.js",
+    "test:webmcp": "node --test test/webmcp/webmcp-tools.test.js",
+    "test:sites": "node --test test/deploy/sites-worker.test.js",
+    "audit:public": "node scripts/audit-public-repo.js",
+    "build:sites": "node scripts/build-sites-demo.js",
+    "gate:stack": "node scripts/verify-stack-compliance.js",
+    "demo:build:readonly": "node scripts/build-readonly-demo-snapshot.js",
+    "demo:generate": "node scripts/generate-golden-dataset.js",
+    "demo:run": "node scripts/run-golden-demo.js",
+    "demo:run:vertex": "node scripts/run-vertex-demo.js",
+    "validate:cloud": "node scripts/run-cloud-validation.js",
+    "validate:cloud-run": "node scripts/run-cloud-run-validation.js",
+    "validate:robustness:cloud-run": "node scripts/run-cloud-run-robustness-validation.js"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "7.22.0",
+    "@google/adk": "2.0.0",
+    "@google/genai": "2.9.0",
+    "pdfjs-dist": "6.2.108"
+  },
+  "overrides": {
+    "adm-zip": "0.6.0"
+  }
+}

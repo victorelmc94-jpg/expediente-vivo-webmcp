@@ -1,0 +1,177 @@
+{
+  "dataset_id": "robustness-v2",
+  "synthetic": true,
+  "authored_before_model_execution": true,
+  "subject_party": "NORA VEGA",
+  "expected": {
+    "matters": [
+      {
+        "label": "PZA-731/2025",
+        "state": "UNCERTAIN",
+        "action": "MONITOR_NEW_NOTICE"
+      },
+      {
+        "label": "RVB-204/2024",
+        "state": "CLOSED",
+        "action": "NO_ACTION"
+      }
+    ],
+    "duplicates": [
+      {
+        "file": "otro_nombre.pdf",
+        "duplicate_of": "anexo-copia.pdf"
+      }
+    ],
+    "document_dates": {
+      "scan_0047.pdf": "2025-02-03",
+      "recibido.pdf": "2025-04-14",
+      "resumen_09.pdf": "2025-04-18",
+      "doc-final2.pdf": "2025-04-18",
+      "anexo-copia.pdf": "2025-04-22",
+      "sin_nombre.pdf": null,
+      "papel_82.pdf": "2024-05-07",
+      "resuelto.pdf": "2024-10-09",
+      "decision-anterior.pdf": "2024-10-11",
+      "folio_borroso.pdf": null
+    },
+    "core_facts": [
+      {
+        "file": "scan_0047.pdf",
+        "page": 1,
+        "predicate": "amount.principal",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "MONEY", "amount": "980.00", "currency": "EUR"},
+        "fragment": "El precio principal pactado asciende a novecientos ochenta euros (980,00 EUR)."
+      },
+      {
+        "file": "scan_0047.pdf",
+        "page": 2,
+        "predicate": "amount.at_maturity",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "MONEY", "amount": "1145.50", "currency": "EUR"},
+        "fragment": "Al vencimiento, el total previsto en la copia asciende a 1.145,50 EUR."
+      },
+      {
+        "file": "scan_0047.pdf",
+        "page": 2,
+        "predicate": "contract.maturity_date",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "DATE", "iso": "2025-03-15"},
+        "fragment": "El vencimiento se fijo para el 15 de marzo de 2025."
+      },
+      {
+        "file": "resumen_09.pdf",
+        "page": 1,
+        "predicate": "procedure.status",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "STATUS", "text": "CLOSED"},
+        "fragment": "La certificacion indica que las actuaciones constaban cerradas en ese momento."
+      },
+      {
+        "file": "doc-final2.pdf",
+        "page": 1,
+        "predicate": "procedure.status",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "STATUS", "text": "OPEN"},
+        "fragment": "El auto ordena mantener abiertas las actuaciones mientras se revisan los originales."
+      },
+      {
+        "file": "resuelto.pdf",
+        "page": 2,
+        "predicate": "amount.recognized",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "MONEY", "amount": "2300.00", "currency": "EUR"},
+        "fragment": "La cantidad finalmente reconocida queda fijada en 2.300,00 EUR."
+      },
+      {
+        "file": "resuelto.pdf",
+        "page": 2,
+        "predicate": "procedure.status",
+        "assertion_kind": "DOCUMENT_FACT",
+        "value": {"type": "STATUS", "text": "CLOSED"},
+        "fragment": "Con esta resolucion el procedimiento queda cerrado."
+      }
+    ],
+    "allegations": [
+      {
+        "file": "recibido.pdf",
+        "predicate": "amount.claimed",
+        "amount": "1490.70",
+        "asserted_by": "BRUMA TALLERES SL"
+      },
+      {
+        "file": "recibido.pdf",
+        "predicate": "obligation.claimed",
+        "asserted_by": "BRUMA TALLERES SL"
+      },
+      {
+        "file": "papel_82.pdf",
+        "predicate": "amount.claimed",
+        "amount": "2720.00",
+        "asserted_by": "LITORAL SUMINISTROS SL"
+      },
+      {
+        "file": "papel_82.pdf",
+        "predicate": "amount.default_interest_claimed",
+        "amount": "420.00",
+        "asserted_by": "LITORAL SUMINISTROS SL"
+      },
+      {
+        "file": "papel_82.pdf",
+        "predicate": "obligation.claimed",
+        "asserted_by": "LITORAL SUMINISTROS SL"
+      }
+    ],
+    "deadline": {
+      "file": "anexo-copia.pdf",
+      "page": 1,
+      "target_party": "BRUMA TALLERES SL",
+      "not_target_party": "NORA VEGA",
+      "fragment": "Se requiere exclusivamente a BRUMA TALLERES SL para que aporte la factura completa dentro de siete dias."
+    },
+    "contradiction": {
+      "matter": "PZA-731/2025",
+      "predicate": "procedure.status",
+      "values": ["CLOSED", "OPEN"],
+      "expected_resolution": "UNRESOLVED"
+    },
+    "undated": {
+      "file": "sin_nombre.pdf",
+      "matter": "PZA-731/2025"
+    },
+    "insufficient_evidence": [
+      {
+        "file": "sin_nombre.pdf",
+        "forbidden_predicate": "amount.recognized"
+      },
+      {
+        "file": "decision-anterior.pdf",
+        "forbidden_predicate": "amount.recognized"
+      }
+    ],
+    "degraded_page": {
+      "file": "folio_borroso.pdf",
+      "page": 1,
+      "text_quality": "LOW",
+      "must_produce_assertions": false
+    },
+    "recognized_amount_source": {
+      "file": "resuelto.pdf",
+      "page": 2,
+      "fragment": "La cantidad finalmente reconocida queda fijada en 2.300,00 EUR."
+    }
+  },
+  "files": [
+    "scan_0047.pdf",
+    "recibido.pdf",
+    "resumen_09.pdf",
+    "doc-final2.pdf",
+    "anexo-copia.pdf",
+    "sin_nombre.pdf",
+    "papel_82.pdf",
+    "resuelto.pdf",
+    "decision-anterior.pdf",
+    "folio_borroso.pdf",
+    "otro_nombre.pdf"
+  ]
+}

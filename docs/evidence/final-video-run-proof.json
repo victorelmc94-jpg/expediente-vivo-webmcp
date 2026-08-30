@@ -1,0 +1,50 @@
+{
+  "evidence_type": "redacted_excerpt_from_private_cloud_run_and_gcs",
+  "synthetic_data_only": true,
+  "run_id": "149936ed-5b89-4f38-86fc-b0f0a481b449",
+  "cloud_run": {
+    "service": "expediente-vivo-private",
+    "revision": "expediente-vivo-private-00003-7cl",
+    "event": "vertical_slice_completed",
+    "status": "COMPLETED",
+    "duration_ms": 27625
+  },
+  "run_report": {
+    "model": "gemini-3.7-flash",
+    "extractor_mode": "vertex-adk",
+    "artifact_store": "gcs-private-temporary",
+    "usage_metadata": {
+      "promptTokenCount": 2949,
+      "candidatesTokenCount": 5161,
+      "totalTokenCount": 8110,
+      "trafficType": "ON_DEMAND"
+    },
+    "stages": {
+      "expediente_agent_extracts_candidates": "PASS",
+      "deterministic_provenance_gate": "PASS",
+      "provenance_coverage_gate": "PASS",
+      "persist_dossier_and_report": "PASS"
+    },
+    "metrics": {
+      "matters": 2,
+      "accepted_assertions": 31,
+      "supported_without_valid_citation": 0,
+      "critical_errors": 0
+    }
+  },
+  "private_artifacts": {
+    "objects": 12,
+    "input_pdfs": 10,
+    "dossier_json": true,
+    "run_report_json": true,
+    "public_members": 0,
+    "one_day_lifecycle": true
+  },
+  "redactions": [
+    "project_id",
+    "account_identity",
+    "service_account_email",
+    "bucket_name",
+    "object_uri"
+  ]
+}

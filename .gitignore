@@ -1,0 +1,14 @@
+node_modules/
+.npm-cache/
+.tools/
+.env
+.env.*
+!.env.example
+artifacts/
+tmp/
+coverage/
+dist/
+.sites-release/
+release/
+*.log
+.DS_Store

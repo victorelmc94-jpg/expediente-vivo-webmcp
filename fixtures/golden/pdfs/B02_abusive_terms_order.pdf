@@ -1,0 +1,42 @@
+%PDF-1.4
+%EV01
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 423 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 48 790 Tm (DOCUMENT TYPE: COURT ORDER) Tj
+1 0 0 1 48 772 Tm (DOCUMENT DATE: 2023-06-15) Tj
+1 0 0 1 48 754 Tm (PROCEDURE: JVB-118/2023) Tj
+1 0 0 1 48 736 Tm (ISSUER: DEMO COURT 2) Tj
+1 0 0 1 48 718 Tm (COMMISSION DECLARED ABUSIVE: 30.00 EUR) Tj
+1 0 0 1 48 700 Tm (DEFAULT INTEREST DECLARED ABUSIVE: 237.00 EUR) Tj
+1 0 0 1 48 682 Tm (EVENT: The court excludes the commission and default interest.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000720 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+817
+%%EOF

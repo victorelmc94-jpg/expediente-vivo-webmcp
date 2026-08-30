@@ -1,0 +1,77 @@
+{
+  "evidence_version": "1.0.0",
+  "captured_at": "2026-08-26T00:33:27+02:00",
+  "synthetic_data_only": true,
+  "deployment": {
+    "compute": "Cloud Run",
+    "region": "europe-west1",
+    "service": "expediente-vivo-private",
+    "access": "authenticated",
+    "agent_framework": "@google/adk 2.0.0",
+    "agent": "ExpedienteAgent",
+    "extractor_mode": "vertex-adk",
+    "model": "gemini-3.7-flash",
+    "model_backend": "Vertex AI",
+    "vertex_location": "eu",
+    "artifact_store": "gcs-private-temporary"
+  },
+  "cloud_run_runs": [
+    {
+      "run_id": "477b564f-08ab-4f6c-af6a-5dcb14479bdb",
+      "cloud_run_duration_ms": 26981,
+      "adversarial_checks": "13/13 PASS",
+      "critical_errors": 0,
+      "model_usage": {
+        "prompt_tokens": 2741,
+        "candidate_tokens": 4905,
+        "total_tokens": 7646,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    {
+      "run_id": "8f9691b8-2baa-41d1-af56-bbc750de2f4c",
+      "cloud_run_duration_ms": 28879,
+      "adversarial_checks": "13/13 PASS",
+      "critical_errors": 0,
+      "model_usage": {
+        "prompt_tokens": 2741,
+        "candidate_tokens": 4905,
+        "total_tokens": 7646,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    {
+      "run_id": "e0981499-c443-41ce-95b6-20ccde2670fb",
+      "cloud_run_duration_ms": 28194,
+      "adversarial_checks": "13/13 PASS",
+      "critical_errors": 0,
+      "model_usage": {
+        "prompt_tokens": 2741,
+        "candidate_tokens": 4905,
+        "total_tokens": 7646,
+        "traffic_type": "ON_DEMAND"
+      }
+    }
+  ],
+  "correlation": {
+    "cloud_logging_event": "vertical_slice_completed",
+    "run_report_fields": [
+      "run_id",
+      "extractor_mode",
+      "model",
+      "stages",
+      "model_events[].usage_metadata",
+      "artifacts"
+    ],
+    "gcs_objects": [
+      "runs/<run-id>/dossier.json",
+      "runs/<run-id>/run_report.json"
+    ]
+  },
+  "source_capture_sha256": {
+    "cloud_validation_5_runs": "a356de8890fabe4f7d56e181fe04020a60ea6be16f244c8435651ae802a43744",
+    "cloud_run_validation_3_runs": "916a022646db647ad5363337e1d1a375a845b60be76f9183a6ee46de45e26b25",
+    "cloud_run_private_evidence": "fc4b58aeefb543252d08fd2a1b1c2376cd406993cda19373236d78baf42352ab"
+  },
+  "redaction_note": "Project, bucket, account and service-account identifiers were removed. Raw captures remain local and Git-ignored."
+}

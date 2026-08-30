@@ -197,4 +197,3 @@ preserved evidence for the pre-existing project and are not the current WebMCP s
 
 Released under the [MIT License](LICENSE). Third-party runtime packages keep their respective
 licenses as recorded in `package-lock.json`.
-

@@ -1,0 +1,1462 @@
+{
+  "demo": {
+    "mode": "synthetic-readonly-presentation",
+    "snapshot_id": "golden-v1-verified-readonly",
+    "read_only": true,
+    "precomputed": true,
+    "synthetic_data_only": true,
+    "live_inference": false,
+    "uploads_enabled": false,
+    "storage_access": false,
+    "source_dataset": "golden-v1",
+    "input_files": [
+      "A01_contract.pdf",
+      "A02_claim.pdf",
+      "A03_admission.pdf",
+      "A04_remedy_order.pdf",
+      "A05_undated_note.pdf",
+      "B01_claim.pdf",
+      "B02_abusive_terms_order.pdf",
+      "B03_judgment.pdf",
+      "C00_scan_without_text.pdf",
+      "A04_remedy_order_DUPLICATE.pdf"
+    ],
+    "verified_by": [
+      "19-test local product suite",
+      "snapshot generation zero-critical gate"
+    ],
+    "real_pipeline_note": "The real private pipeline uses Google ADK and Gemini 3.7 Flash on Vertex AI. This public presentation loads a previously verified synthetic snapshot and performs no inference."
+  },
+  "dossier": {
+    "schema_version": "1.0.0",
+    "generated_at": "2026-08-26T00:00:00.000Z",
+    "synthetic_data_only": true,
+    "subject_party": "ALICIA DEMO",
+    "source_batch": {
+      "batch_sha256": "b3ea3c816ff24d7684022ce004d03303b66f3a76ce7c7ccf3c02310b34d79056",
+      "total_files": 10,
+      "canonical_files": 9,
+      "duplicate_files": 1,
+      "canonical_pages": 12
+    },
+    "matters": [
+      {
+        "matter_id": "matter_9c601b3f7ccd6112",
+        "label": "MON-042/2026",
+        "anchor_keys": [
+          {
+            "kind": "PROCEDURE",
+            "value": "MON-042/2026"
+          },
+          {
+            "kind": "CONTRACT",
+            "value": "CTR-A-2026"
+          }
+        ],
+        "document_ids": [
+          "doc_033aef841abffe6e",
+          "doc_52f949d3a05df939",
+          "doc_849b93a2c7508788",
+          "doc_a44e4b50db8f6366",
+          "doc_d6d299437cf47695"
+        ],
+        "related_matter_ids": [],
+        "assertions": [
+          {
+            "assertion_id": "assertion_ebc51e91220b3945",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_849b93a2c7508788",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2026-04-24"
+            },
+            "statement": "Document dated 2026-04-24.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_849b93a2c7508788",
+                "document_sha256": "2aac49466c10f1e62d9fe0a3abbf9ebcf199abfcb5108dcc1d0ca04f4edb51c5",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2026-04-24",
+                "normalized_start": 24,
+                "normalized_end": 49,
+                "fragment_sha256": "f6f3a19838beb8deee9eb5b18fa825858866f980fe408d8d3d07e13c8dd7737b",
+                "page_text_sha256": "6a1d03af9fc6fc1b312eeefa57044c45d13cfd901e4fd1b30ea979ef0d437dec",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_cc76bdc3e1adc936",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "CTR-A-2026",
+            "predicate": "amount.principal",
+            "value": {
+              "type": "MONEY",
+              "amount": "130.00",
+              "currency": "EUR"
+            },
+            "statement": "PRINCIPAL: 130.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_849b93a2c7508788",
+                "document_sha256": "2aac49466c10f1e62d9fe0a3abbf9ebcf199abfcb5108dcc1d0ca04f4edb51c5",
+                "page_number": 1,
+                "fragment": "PRINCIPAL: 130.00 EUR",
+                "normalized_start": 124,
+                "normalized_end": 145,
+                "fragment_sha256": "80effe860f39bde8cf8a12222215c5ee034300191c9796445fd402102fdeaf05",
+                "page_text_sha256": "6a1d03af9fc6fc1b312eeefa57044c45d13cfd901e4fd1b30ea979ef0d437dec",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_345929302e5af86f",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "CTR-A-2026",
+            "predicate": "amount.at_maturity",
+            "value": {
+              "type": "MONEY",
+              "amount": "183.00",
+              "currency": "EUR"
+            },
+            "statement": "AMOUNT AT MATURITY: 183.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_849b93a2c7508788",
+                "document_sha256": "2aac49466c10f1e62d9fe0a3abbf9ebcf199abfcb5108dcc1d0ca04f4edb51c5",
+                "page_number": 2,
+                "fragment": "AMOUNT AT MATURITY: 183.00 EUR",
+                "normalized_start": 49,
+                "normalized_end": 79,
+                "fragment_sha256": "e23c75af0e04b63732b351aeb1aebc5692f6cd6232c59fce17fd8b2d11095fe7",
+                "page_text_sha256": "0f0a42b63ed13740b6f0f8f2f4bca8ba796615cef8ade6ac9e29914d92110707",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_c595d985f87a04f6",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "CTR-A-2026",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "Contract terms record repayment at maturity."
+            },
+            "statement": "EVENT: Contract terms record repayment at maturity.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_849b93a2c7508788",
+                "document_sha256": "2aac49466c10f1e62d9fe0a3abbf9ebcf199abfcb5108dcc1d0ca04f4edb51c5",
+                "page_number": 2,
+                "fragment": "EVENT: Contract terms record repayment at maturity.",
+                "normalized_start": 106,
+                "normalized_end": 157,
+                "fragment_sha256": "d94e2df92c718fb58ea9a50a569a4da6d36e6dd2a965f42240cd8e185e34ca3a",
+                "page_text_sha256": "0f0a42b63ed13740b6f0f8f2f4bca8ba796615cef8ade6ac9e29914d92110707",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_319231a4ecf90fbc",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "CTR-A-2026",
+            "predicate": "contract.maturity_date",
+            "value": {
+              "type": "DATE",
+              "iso": "2026-05-27"
+            },
+            "statement": "MATURITY DATE: 2026-05-27",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_849b93a2c7508788",
+                "document_sha256": "2aac49466c10f1e62d9fe0a3abbf9ebcf199abfcb5108dcc1d0ca04f4edb51c5",
+                "page_number": 2,
+                "fragment": "MATURITY DATE: 2026-05-27",
+                "normalized_start": 80,
+                "normalized_end": 105,
+                "fragment_sha256": "ed1f5d971869070921816dcb0bd11840fabd8a46e4f3e43337c08d88e8096c21",
+                "page_text_sha256": "0f0a42b63ed13740b6f0f8f2f4bca8ba796615cef8ade6ac9e29914d92110707",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_a04b73a09defa303",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_033aef841abffe6e",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2026-08-20"
+            },
+            "statement": "Document dated 2026-08-20.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_033aef841abffe6e",
+                "document_sha256": "f6f3e6b38cb2d2704c332694ece4d87bdf7c6f5799f37bc9ef8e665874a29620",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2026-08-20",
+                "normalized_start": 21,
+                "normalized_end": 46,
+                "fragment_sha256": "c5e64fd217891bb5cf305e4a17a4f531ae335f8131a5f78dbb758e57042c0b53",
+                "page_text_sha256": "f263bebf68b87e573aa5e7deed2155284abcef0065e8bfc1eeddeb69dd70330d",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_b4eeafb38941eddd",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "subject": "MON-042/2026",
+            "predicate": "amount.claimed",
+            "value": {
+              "type": "MONEY",
+              "amount": "565.20",
+              "currency": "EUR"
+            },
+            "statement": "CLAIMED AMOUNT: 565.20 EUR.",
+            "asserted_by": "ADELANTO NORTE SL",
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_033aef841abffe6e",
+                "document_sha256": "f6f3e6b38cb2d2704c332694ece4d87bdf7c6f5799f37bc9ef8e665874a29620",
+                "page_number": 2,
+                "fragment": "CLAIMED AMOUNT: 565.20 EUR",
+                "normalized_start": 45,
+                "normalized_end": 71,
+                "fragment_sha256": "daeea6fd33cf26bf0b2a18034ef5522de50e952623207227f7ab30a9d1a45448",
+                "page_text_sha256": "61b053b861f42a3861d816f768f5ad35cdaebae942256f9808fba906549e39a8",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_07b3decccc48b89b",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "subject": "ALICIA DEMO",
+            "predicate": "obligation.claimed",
+            "value": {
+              "type": "TEXT",
+              "text": "ALICIA DEMO owes 565.20 EUR."
+            },
+            "statement": "ADELANTO NORTE SL alleges: ALICIA DEMO owes 565.20 EUR.",
+            "asserted_by": "ADELANTO NORTE SL",
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_033aef841abffe6e",
+                "document_sha256": "f6f3e6b38cb2d2704c332694ece4d87bdf7c6f5799f37bc9ef8e665874a29620",
+                "page_number": 1,
+                "fragment": "CLAIMANT ALLEGES: ALICIA DEMO owes 565.20 EUR.",
+                "normalized_start": 147,
+                "normalized_end": 193,
+                "fragment_sha256": "faed3fcfb911c260b07e84d876e9a1b3c15fcfe276bd71e7d7d07c94d65a4b55",
+                "page_text_sha256": "f263bebf68b87e573aa5e7deed2155284abcef0065e8bfc1eeddeb69dd70330d",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_90385048ad1fe881",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "The claimant requests payment of the claimed amount."
+            },
+            "statement": "EVENT: The claimant requests payment of the claimed amount.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_033aef841abffe6e",
+                "document_sha256": "f6f3e6b38cb2d2704c332694ece4d87bdf7c6f5799f37bc9ef8e665874a29620",
+                "page_number": 2,
+                "fragment": "EVENT: The claimant requests payment of the claimed amount.",
+                "normalized_start": 72,
+                "normalized_end": 131,
+                "fragment_sha256": "32db5f975fa16b9d1bae087b5aa64e31aac36cb72426d946cde9fadd8cc49c65",
+                "page_text_sha256": "61b053b861f42a3861d816f768f5ad35cdaebae942256f9808fba906549e39a8",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_91318c7419ca4fca",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_d6d299437cf47695",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2026-08-20"
+            },
+            "statement": "Document dated 2026-08-20.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d6d299437cf47695",
+                "document_sha256": "b8cc83ba196f6e845dfd84ec94bbd45311ca279cdce82786c5ce671d7de4030e",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2026-08-20",
+                "normalized_start": 27,
+                "normalized_end": 52,
+                "fragment_sha256": "c5e64fd217891bb5cf305e4a17a4f531ae335f8131a5f78dbb758e57042c0b53",
+                "page_text_sha256": "f67b24aa14fe6a942f7b92adbd19bd5647853334e7f9b279763807a4acb03703",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_8b8f91100b722f9e",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "The court begins prior review before any payment demand."
+            },
+            "statement": "EVENT: The court begins prior review before any payment demand.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d6d299437cf47695",
+                "document_sha256": "b8cc83ba196f6e845dfd84ec94bbd45311ca279cdce82786c5ce671d7de4030e",
+                "page_number": 1,
+                "fragment": "EVENT: The court begins prior review before any payment demand.",
+                "normalized_start": 134,
+                "normalized_end": 197,
+                "fragment_sha256": "b92536b458f05bbddef9b8462e490637d282ca059a45ade9198a49a848d6f38f",
+                "page_text_sha256": "f67b24aa14fe6a942f7b92adbd19bd5647853334e7f9b279763807a4acb03703",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_773a0dd18e94f807",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "procedure.status",
+            "value": {
+              "type": "STATUS",
+              "text": "OPEN"
+            },
+            "statement": "STATUS: OPEN",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d6d299437cf47695",
+                "document_sha256": "b8cc83ba196f6e845dfd84ec94bbd45311ca279cdce82786c5ce671d7de4030e",
+                "page_number": 1,
+                "fragment": "STATUS: OPEN",
+                "normalized_start": 121,
+                "normalized_end": 133,
+                "fragment_sha256": "39879ed4e11e95442ceb0b164dbe3e4847b42e719ba0f56e2ebad671806edae9",
+                "page_text_sha256": "f67b24aa14fe6a942f7b92adbd19bd5647853334e7f9b279763807a4acb03703",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_e7af39a0abd66400",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_a44e4b50db8f6366",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2026-08-20"
+            },
+            "statement": "Document dated 2026-08-20.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_a44e4b50db8f6366",
+                "document_sha256": "50560f4809b5ea344c1bce2e7259d8cd7c7006ac47c17671f349545e1c818e6e",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2026-08-20",
+                "normalized_start": 27,
+                "normalized_end": 52,
+                "fragment_sha256": "c5e64fd217891bb5cf305e4a17a4f531ae335f8131a5f78dbb758e57042c0b53",
+                "page_text_sha256": "45d33ccce6b1220675e71402097116d054c7054709c8edfdcfcbdb6599e7a5c2",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_799a83755349cd06",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "deadline.directive",
+            "value": {
+              "type": "TEXT",
+              "text": "ADELANTO NORTE SL must remedy deficient copies within 5 days."
+            },
+            "statement": "ADELANTO NORTE SL must remedy deficient copies within 5 days.",
+            "asserted_by": null,
+            "target_party": "ADELANTO NORTE SL",
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_a44e4b50db8f6366",
+                "document_sha256": "50560f4809b5ea344c1bce2e7259d8cd7c7006ac47c17671f349545e1c818e6e",
+                "page_number": 1,
+                "fragment": "DIRECTIVE: ADELANTO NORTE SL must remedy deficient copies within 5 days.",
+                "normalized_start": 127,
+                "normalized_end": 199,
+                "fragment_sha256": "f983b56fe5c2feb8ecffb0d1551e8c7dad43eefe3070554ef95e2f8e060ac31b",
+                "page_text_sha256": "45d33ccce6b1220675e71402097116d054c7054709c8edfdcfcbdb6599e7a5c2",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_e540fd989a4bf82a",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "A five day remedy period is addressed to the claimant."
+            },
+            "statement": "EVENT: A five day remedy period is addressed to the claimant.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_a44e4b50db8f6366",
+                "document_sha256": "50560f4809b5ea344c1bce2e7259d8cd7c7006ac47c17671f349545e1c818e6e",
+                "page_number": 1,
+                "fragment": "EVENT: A five day remedy period is addressed to the claimant.",
+                "normalized_start": 200,
+                "normalized_end": 261,
+                "fragment_sha256": "95ab8cbf0d321a92c8f5d4a79389e41648b8a10e4df81a345e6c70690f7ae2bd",
+                "page_text_sha256": "45d33ccce6b1220675e71402097116d054c7054709c8edfdcfcbdb6599e7a5c2",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_0c072f8bf71fe364",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "A document is referenced without a clear document date."
+            },
+            "statement": "EVENT: A document is referenced without a clear document date.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_52f949d3a05df939",
+                "document_sha256": "f70b4aedf2625ee9939941e4b86ad7e61537b292a3c2dd3a1f7ed19cc32f66c2",
+                "page_number": 1,
+                "fragment": "EVENT: A document is referenced without a clear document date.",
+                "normalized_start": 65,
+                "normalized_end": 127,
+                "fragment_sha256": "a08b47f1e072b8155aa53a176751f9faeaad18261097b629b4eb3abe3fdcaf80",
+                "page_text_sha256": "24cb00a92acf0543ed1f367c8186e81ab6685e0f11360753a5950cc46f7d2048",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_ca8c96fc55040690",
+            "matter_id": "matter_9c601b3f7ccd6112",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "MON-042/2026",
+            "predicate": "evidence.missing",
+            "value": {
+              "type": "TEXT",
+              "text": "Legible copy mentioned but not included."
+            },
+            "statement": "MISSING ATTACHMENT: Legible copy mentioned but not included.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "INSUFFICIENT_EVIDENCE",
+            "evidence_refs": [
+              {
+                "document_id": "doc_52f949d3a05df939",
+                "document_sha256": "f70b4aedf2625ee9939941e4b86ad7e61537b292a3c2dd3a1f7ed19cc32f66c2",
+                "page_number": 1,
+                "fragment": "MISSING ATTACHMENT: Legible copy mentioned but not included.",
+                "normalized_start": 128,
+                "normalized_end": 188,
+                "fragment_sha256": "06a5e5e46aade7e33726f60e9dcb2d5515e3113f236f4d43d99c09ebd7594e77",
+                "page_text_sha256": "24cb00a92acf0543ed1f367c8186e81ab6685e0f11360753a5950cc46f7d2048",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [
+              "MISSING_EVIDENCE"
+            ],
+            "needs_human_review": true,
+            "producer": "deterministic-dev-extractor@1"
+          }
+        ],
+        "timeline": [
+          {
+            "event_id": "event_7e9a314d28f1b2a7",
+            "date": "2026-04-24",
+            "description": "Document dated 2026-04-24.",
+            "assertion_ids": [
+              "assertion_ebc51e91220b3945"
+            ]
+          },
+          {
+            "event_id": "event_019ce015784e3b23",
+            "date": "2026-04-24",
+            "description": "EVENT: Contract terms record repayment at maturity.",
+            "assertion_ids": [
+              "assertion_c595d985f87a04f6"
+            ]
+          },
+          {
+            "event_id": "event_a83e54d14cc1f7fd",
+            "date": "2026-08-20",
+            "description": "Document dated 2026-08-20.",
+            "assertion_ids": [
+              "assertion_a04b73a09defa303"
+            ]
+          },
+          {
+            "event_id": "event_00eedad5e8532045",
+            "date": "2026-08-20",
+            "description": "EVENT: The claimant requests payment of the claimed amount.",
+            "assertion_ids": [
+              "assertion_90385048ad1fe881"
+            ]
+          },
+          {
+            "event_id": "event_d57fcb32008b46ec",
+            "date": "2026-08-20",
+            "description": "Document dated 2026-08-20.",
+            "assertion_ids": [
+              "assertion_91318c7419ca4fca"
+            ]
+          },
+          {
+            "event_id": "event_779af7ecc2f9b696",
+            "date": "2026-08-20",
+            "description": "EVENT: The court begins prior review before any payment demand.",
+            "assertion_ids": [
+              "assertion_8b8f91100b722f9e"
+            ]
+          },
+          {
+            "event_id": "event_01551eb348601b2f",
+            "date": "2026-08-20",
+            "description": "Document dated 2026-08-20.",
+            "assertion_ids": [
+              "assertion_e7af39a0abd66400"
+            ]
+          },
+          {
+            "event_id": "event_d2c2ab96a9bd8f13",
+            "date": "2026-08-20",
+            "description": "EVENT: A five day remedy period is addressed to the claimant.",
+            "assertion_ids": [
+              "assertion_e540fd989a4bf82a"
+            ]
+          }
+        ],
+        "undated_timeline": [
+          {
+            "event_id": "event_c174e8e432e641cb",
+            "date": null,
+            "description": "EVENT: A document is referenced without a clear document date.",
+            "assertion_ids": [
+              "assertion_0c072f8bf71fe364"
+            ]
+          }
+        ],
+        "amount_ledger": [
+          {
+            "amount_entry_id": "amount_1174ffbcc1a84867",
+            "role": "principal",
+            "amount": "130.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_cc76bdc3e1adc936"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_1d4d2ef6df4371e7",
+            "role": "at_maturity",
+            "amount": "183.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_345929302e5af86f"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_e0791de7e6fb8811",
+            "role": "claimed",
+            "amount": "565.20",
+            "currency": "EUR",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "asserted_by": "ADELANTO NORTE SL",
+            "assertion_ids": [
+              "assertion_b4eeafb38941eddd"
+            ]
+          }
+        ],
+        "matter_state": "OPEN",
+        "state_basis_assertion_ids": [
+          "assertion_773a0dd18e94f807"
+        ],
+        "conflicts": [],
+        "missing_evidence": [
+          {
+            "assertion_id": "assertion_ca8c96fc55040690",
+            "description": "MISSING ATTACHMENT: Legible copy mentioned but not included."
+          }
+        ],
+        "proposed_action_ids": [
+          "action_ca948f8c06be50a8"
+        ]
+      },
+      {
+        "matter_id": "matter_89a24eec05a5b6fe",
+        "label": "JVB-118/2023",
+        "anchor_keys": [
+          {
+            "kind": "PROCEDURE",
+            "value": "JVB-118/2023"
+          },
+          {
+            "kind": "CONTRACT",
+            "value": "CTR-B-2023"
+          }
+        ],
+        "document_ids": [
+          "doc_11b5bc2a6653dd1e",
+          "doc_344f425f8a74c30a",
+          "doc_d32ebd0ef6ed3898"
+        ],
+        "related_matter_ids": [],
+        "assertions": [
+          {
+            "assertion_id": "assertion_ba783a1068627f82",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_11b5bc2a6653dd1e",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2023-02-01"
+            },
+            "statement": "Document dated 2023-02-01.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_11b5bc2a6653dd1e",
+                "document_sha256": "2e9965d6777f8ab54857cc1b16759d2dbc17c0ee3fb6c0211bf8ac76845801e8",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2023-02-01",
+                "normalized_start": 21,
+                "normalized_end": 46,
+                "fragment_sha256": "43a0c9c439f72020a6a89244d072e0592d9d69f1539c31696c2b821fefa55ac1",
+                "page_text_sha256": "0a1920d7758df418be16f404d25aa140e542197a15d4681fa67e066822fde694",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_2da9e02a8b1ece80",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.principal",
+            "value": {
+              "type": "MONEY",
+              "amount": "200.00",
+              "currency": "EUR"
+            },
+            "statement": "PRINCIPAL: 200.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_11b5bc2a6653dd1e",
+                "document_sha256": "2e9965d6777f8ab54857cc1b16759d2dbc17c0ee3fb6c0211bf8ac76845801e8",
+                "page_number": 1,
+                "fragment": "PRINCIPAL: 200.00 EUR",
+                "normalized_start": 145,
+                "normalized_end": 166,
+                "fragment_sha256": "3ee6c7e67256a424c4317ae1b2abf77c48fa25d1092eb083c01fc733966e9769",
+                "page_text_sha256": "0a1920d7758df418be16f404d25aa140e542197a15d4681fa67e066822fde694",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_4ded8ce0b4bb3228",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.claimed",
+            "value": {
+              "type": "MONEY",
+              "amount": "470.00",
+              "currency": "EUR"
+            },
+            "statement": "CLAIMED AMOUNT: 470.00 EUR.",
+            "asserted_by": "FINANZA AZUL SL",
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_11b5bc2a6653dd1e",
+                "document_sha256": "2e9965d6777f8ab54857cc1b16759d2dbc17c0ee3fb6c0211bf8ac76845801e8",
+                "page_number": 1,
+                "fragment": "CLAIMED AMOUNT: 470.00 EUR",
+                "normalized_start": 237,
+                "normalized_end": 263,
+                "fragment_sha256": "80cab2eb94dde9e1d8d2916b1d862fbe4cd76a0dd1949306d1c7723ad4b591a0",
+                "page_text_sha256": "0a1920d7758df418be16f404d25aa140e542197a15d4681fa67e066822fde694",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_ae6463e481e35b01",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.remuneratory_interest",
+            "value": {
+              "type": "MONEY",
+              "amount": "33.00",
+              "currency": "EUR"
+            },
+            "statement": "REMUNERATORY INTEREST: 33.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_11b5bc2a6653dd1e",
+                "document_sha256": "2e9965d6777f8ab54857cc1b16759d2dbc17c0ee3fb6c0211bf8ac76845801e8",
+                "page_number": 1,
+                "fragment": "REMUNERATORY INTEREST: 33.00 EUR",
+                "normalized_start": 167,
+                "normalized_end": 199,
+                "fragment_sha256": "1598e68aa9488458f124f305cb9472439465ebf7cc6af4b03a2c59b92810f3fb",
+                "page_text_sha256": "0a1920d7758df418be16f404d25aa140e542197a15d4681fa67e066822fde694",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_f7ff4a526c57c1c5",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.default_interest_claimed",
+            "value": {
+              "type": "MONEY",
+              "amount": "237.00",
+              "currency": "EUR"
+            },
+            "statement": "DEFAULT INTEREST CLAIMED: 237.00 EUR.",
+            "asserted_by": "FINANZA AZUL SL",
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_11b5bc2a6653dd1e",
+                "document_sha256": "2e9965d6777f8ab54857cc1b16759d2dbc17c0ee3fb6c0211bf8ac76845801e8",
+                "page_number": 1,
+                "fragment": "DEFAULT INTEREST CLAIMED: 237.00 EUR",
+                "normalized_start": 200,
+                "normalized_end": 236,
+                "fragment_sha256": "00234119eb856c78cc592a5968bd187a73f1309551e93b5a41545cd073cdbee6",
+                "page_text_sha256": "0a1920d7758df418be16f404d25aa140e542197a15d4681fa67e066822fde694",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_98de45d648f59093",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_d32ebd0ef6ed3898",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2023-06-15"
+            },
+            "statement": "Document dated 2023-06-15.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d32ebd0ef6ed3898",
+                "document_sha256": "f5b2854e23a5fa0b6a0f93ee2ec72bf999490ae1df789534b6d4edcde29ee8fe",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2023-06-15",
+                "normalized_start": 27,
+                "normalized_end": 52,
+                "fragment_sha256": "ce875cc31462806fbacbad408b010eadcd55c548376f58258a22a52033fa9632",
+                "page_text_sha256": "9bdcf6e36aa0d5dd31e54faaa83ea873e00e700f7065ed2cda1a330aa3fab184",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_a490fe1e20dbaab7",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.commission_excluded",
+            "value": {
+              "type": "MONEY",
+              "amount": "30.00",
+              "currency": "EUR"
+            },
+            "statement": "COMMISSION DECLARED ABUSIVE: 30.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d32ebd0ef6ed3898",
+                "document_sha256": "f5b2854e23a5fa0b6a0f93ee2ec72bf999490ae1df789534b6d4edcde29ee8fe",
+                "page_number": 1,
+                "fragment": "COMMISSION DECLARED ABUSIVE: 30.00 EUR",
+                "normalized_start": 98,
+                "normalized_end": 136,
+                "fragment_sha256": "c6d97eb67ed8d8f90379157aae24b21d149c8e81438e15c92f800d5cd3e2b4cf",
+                "page_text_sha256": "9bdcf6e36aa0d5dd31e54faaa83ea873e00e700f7065ed2cda1a330aa3fab184",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_dbbe10c37f6dd6ae",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.default_interest_excluded",
+            "value": {
+              "type": "MONEY",
+              "amount": "237.00",
+              "currency": "EUR"
+            },
+            "statement": "DEFAULT INTEREST DECLARED ABUSIVE: 237.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d32ebd0ef6ed3898",
+                "document_sha256": "f5b2854e23a5fa0b6a0f93ee2ec72bf999490ae1df789534b6d4edcde29ee8fe",
+                "page_number": 1,
+                "fragment": "DEFAULT INTEREST DECLARED ABUSIVE: 237.00 EUR",
+                "normalized_start": 137,
+                "normalized_end": 182,
+                "fragment_sha256": "48871fb528c8e32ec45fd12005013baa9382dbd02eedfeb7d8e9d4340db7f2f0",
+                "page_text_sha256": "9bdcf6e36aa0d5dd31e54faaa83ea873e00e700f7065ed2cda1a330aa3fab184",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_8065ba98604ff213",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "The court excludes the commission and default interest."
+            },
+            "statement": "EVENT: The court excludes the commission and default interest.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_d32ebd0ef6ed3898",
+                "document_sha256": "f5b2854e23a5fa0b6a0f93ee2ec72bf999490ae1df789534b6d4edcde29ee8fe",
+                "page_number": 1,
+                "fragment": "EVENT: The court excludes the commission and default interest.",
+                "normalized_start": 183,
+                "normalized_end": 245,
+                "fragment_sha256": "d477e88bb66a863e1699e4e19bbd888eae25ed7ad18fe806a409ad9913d2a8fb",
+                "page_text_sha256": "9bdcf6e36aa0d5dd31e54faaa83ea873e00e700f7065ed2cda1a330aa3fab184",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_e1cc6921aa2f7ec5",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "doc_344f425f8a74c30a",
+            "predicate": "document.date",
+            "value": {
+              "type": "DATE",
+              "iso": "2023-10-25"
+            },
+            "statement": "Document dated 2023-10-25.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_344f425f8a74c30a",
+                "document_sha256": "3acab87c1ac9755a340569c8b7087edfd7db28b6ee765bfce205f6691620ef39",
+                "page_number": 1,
+                "fragment": "DOCUMENT DATE: 2023-10-25",
+                "normalized_start": 24,
+                "normalized_end": 49,
+                "fragment_sha256": "0032ad0bcb2a3e58e25a354cb726286967dc4a7227f937d647a46d9cbe5431e9",
+                "page_text_sha256": "c96ad593fd20c5d9d1efa1215e3cde9c7a82a3ca5081747819714d89ade5511c",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_83bec712179599a7",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "amount.recognized",
+            "value": {
+              "type": "MONEY",
+              "amount": "233.00",
+              "currency": "EUR"
+            },
+            "statement": "FINAL RECOGNIZED AMOUNT: 233.00 EUR.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_344f425f8a74c30a",
+                "document_sha256": "3acab87c1ac9755a340569c8b7087edfd7db28b6ee765bfce205f6691620ef39",
+                "page_number": 2,
+                "fragment": "FINAL RECOGNIZED AMOUNT: 233.00 EUR",
+                "normalized_start": 48,
+                "normalized_end": 83,
+                "fragment_sha256": "8484d39f39c40ddd74a9137b9fc94eb61e7a90ec9eb9796d5ff5da2b0bbdf414",
+                "page_text_sha256": "37b56f89c0f09b0240bf69c96f620ef77ea4582dc4131c50d4183cd23709d3c7",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_d5d79ce809154018",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "timeline.event",
+            "value": {
+              "type": "TEXT",
+              "text": "Final disposition recorded for the synthetic demo matter."
+            },
+            "statement": "EVENT: Final disposition recorded for the synthetic demo matter.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_344f425f8a74c30a",
+                "document_sha256": "3acab87c1ac9755a340569c8b7087edfd7db28b6ee765bfce205f6691620ef39",
+                "page_number": 2,
+                "fragment": "EVENT: Final disposition recorded for the synthetic demo matter.",
+                "normalized_start": 99,
+                "normalized_end": 163,
+                "fragment_sha256": "1bbf32ee211a6707071ab8cdadc927c077b1e12bc0bdf2747145286b2b1d861c",
+                "page_text_sha256": "37b56f89c0f09b0240bf69c96f620ef77ea4582dc4131c50d4183cd23709d3c7",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_02b8ae71c72be23e",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "procedure.decision",
+            "value": {
+              "type": "TEXT",
+              "text": "The judgment partially upholds the claim."
+            },
+            "statement": "DECISION: The judgment partially upholds the claim.",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_344f425f8a74c30a",
+                "document_sha256": "3acab87c1ac9755a340569c8b7087edfd7db28b6ee765bfce205f6691620ef39",
+                "page_number": 1,
+                "fragment": "DECISION: The judgment partially upholds the claim.",
+                "normalized_start": 95,
+                "normalized_end": 146,
+                "fragment_sha256": "578c841e2804bbb8c8bf4bd1775abbfa9db6d5096c7280092fcfc9bb6e509cc2",
+                "page_text_sha256": "c96ad593fd20c5d9d1efa1215e3cde9c7a82a3ca5081747819714d89ade5511c",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          },
+          {
+            "assertion_id": "assertion_47ab3f5b897b945f",
+            "matter_id": "matter_89a24eec05a5b6fe",
+            "assertion_kind": "DOCUMENT_FACT",
+            "subject": "JVB-118/2023",
+            "predicate": "procedure.status",
+            "value": {
+              "type": "STATUS",
+              "text": "CLOSED"
+            },
+            "statement": "STATUS: CLOSED",
+            "asserted_by": null,
+            "target_party": null,
+            "verification_status": "SUPPORTED",
+            "evidence_refs": [
+              {
+                "document_id": "doc_344f425f8a74c30a",
+                "document_sha256": "3acab87c1ac9755a340569c8b7087edfd7db28b6ee765bfce205f6691620ef39",
+                "page_number": 2,
+                "fragment": "STATUS: CLOSED",
+                "normalized_start": 84,
+                "normalized_end": 98,
+                "fragment_sha256": "7214be0a8f226dbefc1812c74f2eb65026367c786dc418996bde002f0287d9eb",
+                "page_text_sha256": "37b56f89c0f09b0240bf69c96f620ef77ea4582dc4131c50d4183cd23709d3c7",
+                "evidence_role": "SUPPORTS"
+              }
+            ],
+            "derived_from_assertion_ids": [],
+            "extraction_confidence": "HIGH",
+            "review_reasons": [],
+            "needs_human_review": false,
+            "producer": "deterministic-dev-extractor@1"
+          }
+        ],
+        "timeline": [
+          {
+            "event_id": "event_82ed26568a3c443d",
+            "date": "2023-02-01",
+            "description": "Document dated 2023-02-01.",
+            "assertion_ids": [
+              "assertion_ba783a1068627f82"
+            ]
+          },
+          {
+            "event_id": "event_418b8bea220a79ee",
+            "date": "2023-06-15",
+            "description": "Document dated 2023-06-15.",
+            "assertion_ids": [
+              "assertion_98de45d648f59093"
+            ]
+          },
+          {
+            "event_id": "event_4f920433e22d3762",
+            "date": "2023-06-15",
+            "description": "EVENT: The court excludes the commission and default interest.",
+            "assertion_ids": [
+              "assertion_8065ba98604ff213"
+            ]
+          },
+          {
+            "event_id": "event_599de40eb33fb0c5",
+            "date": "2023-10-25",
+            "description": "Document dated 2023-10-25.",
+            "assertion_ids": [
+              "assertion_e1cc6921aa2f7ec5"
+            ]
+          },
+          {
+            "event_id": "event_e03b3278526763d3",
+            "date": "2023-10-25",
+            "description": "EVENT: Final disposition recorded for the synthetic demo matter.",
+            "assertion_ids": [
+              "assertion_d5d79ce809154018"
+            ]
+          },
+          {
+            "event_id": "event_e8e33f3ec21c884c",
+            "date": "2023-10-25",
+            "description": "DECISION: The judgment partially upholds the claim.",
+            "assertion_ids": [
+              "assertion_02b8ae71c72be23e"
+            ]
+          }
+        ],
+        "undated_timeline": [],
+        "amount_ledger": [
+          {
+            "amount_entry_id": "amount_ab3281446540b875",
+            "role": "principal",
+            "amount": "200.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_2da9e02a8b1ece80"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_7f84285296a879f8",
+            "role": "claimed",
+            "amount": "470.00",
+            "currency": "EUR",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "asserted_by": "FINANZA AZUL SL",
+            "assertion_ids": [
+              "assertion_4ded8ce0b4bb3228"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_38bbc5d8e2d4cd35",
+            "role": "remuneratory_interest",
+            "amount": "33.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_ae6463e481e35b01"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_78a49e754b7c0fc0",
+            "role": "default_interest_claimed",
+            "amount": "237.00",
+            "currency": "EUR",
+            "assertion_kind": "PARTY_ALLEGATION",
+            "asserted_by": "FINANZA AZUL SL",
+            "assertion_ids": [
+              "assertion_f7ff4a526c57c1c5"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_0bf01cca06ef6f74",
+            "role": "commission_excluded",
+            "amount": "30.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_a490fe1e20dbaab7"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_8cfb2ef23d751cb6",
+            "role": "default_interest_excluded",
+            "amount": "237.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_dbbe10c37f6dd6ae"
+            ]
+          },
+          {
+            "amount_entry_id": "amount_5f7acede55b038a1",
+            "role": "recognized",
+            "amount": "233.00",
+            "currency": "EUR",
+            "assertion_kind": "DOCUMENT_FACT",
+            "asserted_by": null,
+            "assertion_ids": [
+              "assertion_83bec712179599a7"
+            ]
+          }
+        ],
+        "matter_state": "CLOSED",
+        "state_basis_assertion_ids": [
+          "assertion_47ab3f5b897b945f"
+        ],
+        "conflicts": [],
+        "missing_evidence": [],
+        "proposed_action_ids": [
+          "action_7e5714129d135411"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "action_ca948f8c06be50a8",
+        "matter_id": "matter_9c601b3f7ccd6112",
+        "action_type": "MONITOR_NEW_NOTICE",
+        "description": "Monitor for a new document; no current deadline is assigned to the subject party.",
+        "target_party": "ALICIA DEMO",
+        "basis_assertion_ids": [
+          "assertion_799a83755349cd06"
+        ],
+        "deadline": null,
+        "prerequisites": [],
+        "status": "PROPOSED",
+        "requires_human_approval": false
+      },
+      {
+        "action_id": "action_7e5714129d135411",
+        "matter_id": "matter_89a24eec05a5b6fe",
+        "action_type": "NO_ACTION",
+        "description": "No pending action is derived from the supplied documents.",
+        "target_party": "ALICIA DEMO",
+        "basis_assertion_ids": [
+          "assertion_47ab3f5b897b945f"
+        ],
+        "deadline": null,
+        "prerequisites": [],
+        "status": "NO_ACTION",
+        "requires_human_approval": false
+      }
+    ],
+    "unclassified_document_ids": [
+      "doc_9c2776c13a61d7d1"
+    ],
+    "duplicate_assignments": [
+      {
+        "document_id": "doc_a44e4b50db8f6366",
+        "duplicate_of": "doc_a44e4b50db8f6366",
+        "matter_id": "matter_9c601b3f7ccd6112"
+      }
+    ],
+    "review_links": [],
+    "run_id": "golden-v1-verified-readonly",
+    "extractor_mode": "precomputed-readonly"
+  },
+  "report": {
+    "run_id": "golden-v1-verified-readonly",
+    "status": "VERIFIED_SNAPSHOT",
+    "completed_at": "2026-08-26T00:00:00.000Z",
+    "extractor_mode": "precomputed-readonly",
+    "artifact_store": "image-embedded-json",
+    "model": null,
+    "stages": [
+      {
+        "name": "load_verified_snapshot",
+        "status": "PASS",
+        "duration_ms": 0
+      }
+    ],
+    "metrics": {
+      "input_files": 10,
+      "canonical_files": 9,
+      "duplicate_files": 1,
+      "canonical_pages": 12,
+      "matters": 2,
+      "accepted_assertions": 31,
+      "rejected_assertions": 0,
+      "supported_without_valid_citation": 0,
+      "critical_errors": 0
+    },
+    "rejected_candidates": [],
+    "model_events": [],
+    "source_contract_signature": "53f6dcf854e24263bdb7858749e7c567af524f3a158b7d034933e29c8bdadc77"
+  }
+}

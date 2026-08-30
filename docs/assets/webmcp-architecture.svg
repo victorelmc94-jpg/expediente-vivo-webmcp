@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Expediente Vivo WebMCP human-agent evidence review architecture</title>
+  <desc id="desc">A human asks an agent to review evidence. The agent uses four WebMCP site tools to read a synthetic dossier, inspect an assertion, focus evidence and create a pending proposal. Only the human can accept or reject it, and the canonical dossier remains unchanged.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#10263b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#02060c" flood-opacity="0.38"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#77e0c1"/>
+    </marker>
+    <style>
+      .title{font:700 48px Inter,Segoe UI,sans-serif;fill:#f4f8fb}.subtitle{font:400 22px Inter,Segoe UI,sans-serif;fill:#a9bdcb}.label{font:700 15px Inter,Segoe UI,sans-serif;letter-spacing:2px;fill:#77e0c1}.head{font:700 27px Inter,Segoe UI,sans-serif;fill:#f4f8fb}.copy{font:400 18px Inter,Segoe UI,sans-serif;fill:#bfd0dc}.small{font:600 15px Inter,Segoe UI,sans-serif;fill:#e3edf3}.safe{font:700 17px Inter,Segoe UI,sans-serif;fill:#ffda8a}.line{stroke:#77e0c1;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1430" cy="100" r="220" fill="#1d6b62" opacity="0.14"/>
+  <circle cx="170" cy="800" r="270" fill="#27609a" opacity="0.12"/>
+
+  <text x="92" y="86" class="label">EXPEDIENTE VIVO · WEBMCP EVIDENCE REVIEW</text>
+  <text x="92" y="145" class="title">The agent proposes. The human decides.</text>
+  <text x="92" y="184" class="subtitle">Typed site tools connect structured evidence to a visible, bounded review handoff.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="92" y="270" width="270" height="190" rx="24" fill="#142a3d" stroke="#31536c"/>
+    <text x="124" y="310" class="label">01 · PERSON</text>
+    <text x="124" y="358" class="head">Human reviewer</text>
+    <text x="124" y="397" class="copy">Asks the agent to</text>
+    <text x="124" y="424" class="copy">review the open dossier.</text>
+
+    <rect x="470" y="270" width="300" height="190" rx="24" fill="#142a3d" stroke="#31536c"/>
+    <text x="502" y="310" class="label">02 · AGENT</text>
+    <text x="502" y="358" class="head">ChatGPT</text>
+    <text x="502" y="397" class="copy">Discovers and invokes</text>
+    <text x="502" y="424" class="copy">the site's WebMCP tools.</text>
+
+    <rect x="878" y="250" width="630" height="230" rx="24" fill="#102f37" stroke="#43ad94" stroke-width="2"/>
+    <text x="912" y="292" class="label">03 · SITE TOOLS</text>
+    <text x="912" y="337" class="head">Application-defined capabilities</text>
+    <rect x="912" y="368" width="266" height="38" rx="10" fill="#173f47"/><text x="928" y="393" class="small">get_dossier_summary</text>
+    <rect x="1194" y="368" width="276" height="38" rx="10" fill="#173f47"/><text x="1210" y="393" class="small">inspect_assertion</text>
+    <rect x="912" y="420" width="266" height="38" rx="10" fill="#173f47"/><text x="928" y="445" class="small">focus_evidence</text>
+    <rect x="1194" y="420" width="276" height="38" rx="10" fill="#173f47"/><text x="1210" y="445" class="small">propose_review_status</text>
+  </g>
+
+  <path d="M362 365 H456" class="line"/>
+  <path d="M770 365 H864" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="92" y="575" width="420" height="190" rx="24" fill="#142a3d" stroke="#31536c"/>
+    <text x="124" y="617" class="label">STRUCTURED SOURCE</text>
+    <text x="124" y="662" class="head">Synthetic dossier</text>
+    <text x="124" y="701" class="copy">Real matter and assertion IDs,</text>
+    <text x="124" y="728" class="copy">classification and exact provenance.</text>
+
+    <rect x="590" y="575" width="420" height="190" rx="24" fill="#142a3d" stroke="#31536c"/>
+    <text x="622" y="617" class="label">VISIBLE APPLICATION STATE</text>
+    <text x="622" y="662" class="head">Evidence + proposal</text>
+    <text x="622" y="701" class="copy">The source dialog opens and a separate</text>
+    <text x="622" y="728" class="copy">pending agent proposal appears.</text>
+
+    <rect x="1088" y="575" width="420" height="190" rx="24" fill="#3a2f1b" stroke="#d7a84a" stroke-width="2"/>
+    <text x="1120" y="617" class="label" fill="#ffda8a">HUMAN CONTROL</text>
+    <text x="1120" y="662" class="head">ACCEPT or REJECT</text>
+    <text x="1120" y="701" class="copy">A visible click is required.</text>
+    <text x="1120" y="735" class="safe">Canonical dossier unchanged.</text>
+  </g>
+
+  <path d="M1120 480 C1080 525 905 520 800 562" class="line"/>
+  <path d="M512 670 H576" class="line"/>
+  <path d="M1010 670 H1074" class="line"/>
+  <path d="M1298 575 C1298 520 330 520 230 475" class="line"/>
+
+  <text x="92" y="850" class="subtitle">WebMCP exposes domain semantics and bounded actions — not brittle DOM scraping and not autonomous legal judgment.</text>
+</svg>
+
